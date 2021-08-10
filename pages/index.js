@@ -1,6 +1,8 @@
 import Head from "next/head";
 import { Banner } from "../components/Banner";
+import Footer from "../components/Footer";
 import Header from "../components/Header";
+import LargeCard from "../components/LargeCard";
 import MediumCard from "../components/MediumCard";
 import SmallCard from "../components/SmallCard";
 
@@ -9,7 +11,7 @@ export default function Home({ exploreData, cardsData }) {
 		<div className="">
 			<Head>
 				<title>Airbnb</title>
-				<link rel="icon" href="/favicon.ico" />
+				<link rel="icon" href="/fav.png" />
 			</Head>
 
 			{/* Header */}
@@ -47,7 +49,17 @@ export default function Home({ exploreData, cardsData }) {
 						))}
 					</div>
 				</section>
+
+				{/* large card */}
+				<LargeCard
+					img="https://links.papareact.com/4cj"
+					title="The Greatest Outdoors"
+					description="Wishlists created by Airbnb"
+					buttonText="Get Inspired"
+				/>
 			</main>
+
+			<Footer />
 		</div>
 	);
 }
